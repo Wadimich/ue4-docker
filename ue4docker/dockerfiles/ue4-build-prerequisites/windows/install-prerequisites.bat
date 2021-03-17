@@ -24,7 +24,9 @@ curl --progress -L "https://aka.ms/vs/16/release/vs_buildtools.exe" --output %TE
 	--add Microsoft.VisualStudio.Workload.UniversalBuildTools ^
 	--add Microsoft.VisualStudio.Workload.NetCoreBuildTools ^
 	--add Microsoft.VisualStudio.Workload.MSBuildTools ^
-	--add Microsoft.VisualStudio.Component.NuGet
+	--add Microsoft.VisualStudio.Component.NuGet ^
+	--add Microsoft.VisualStudio.Component.VC.ATL ^
+	--add Microsoft.VisualStudio.Component.VC.ATLMFC
 python C:\buildtools-exitcode.py %ERRORLEVEL% || goto :error
 
 @rem Copy pdbcopy.exe to the expected location(s)
